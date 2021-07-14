@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 初始化 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 链接的字体样式只能在a标签里单独设置 */
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        /* 小米图标渐变 */
+        .box {
+            position: absolute;
+            top: 10px;
+            right: 100px;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border-radius: 20px;
+            background: url(5.jpg) no-repeat;
+            transition: background-position 3s ease;
+        }
+        .box:hover {
+            background-position: -350px 0;
+        }
+        /* 商品栏 */
+        /* 大盒子 */
+        .bigone {
+            width: 400px;
+            height: 600px;
+            margin: 10px 10px 0 50px;
+        }
+        /* 图片 */
+        .bigone img {
+            width: 100%;
+            height: 60%;
+        }
+        /* 文字部分 */
+        .bigone p {
+            height: 80px;
+            background-color: #fff;
+            font-size: 20px;
+            color: rgb(114, 134, 148);
+            text-align: center;
+            line-height: 80px;
+        }
+        /* 价格 */
+        .bigone .now {
+            font-size: 20px;
+            font-weight: 700;
+            color: red;
+            padding-left: 18px;
+        }
+        .bigone .past {
+            color: rgb(114, 134, 148);
+            text-decoration: line-through;
+        }
+        /* 进度条部分 */
+        .bigone .apraise {
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+        .bigone .apraise .jindu {
+            display: inline-block;
+            width: 200px;
+            height: 16px;
+            border: 1px solid red;
+            border-radius:8px;
+            vertical-align: middle;
+        }
+        .bigone .apraise .jindu .full {
+            background-color: red;
+            width: 50%;
+            height: 100%;
+            border-radius: 8px;
+            transition: all 3s ease;
+        }
+        .bigone .apraise .jindu:hover .full {
+            width: 100%;
+        }
+        .bigone .apraise {
+            font-size: 16px;
+            color: rgb(114, 134, 148);
+        }
+        .bigone .apraise .num {
+            color: red;
+        }
+        /* 底部 */
+        .footer {
+            width: 100%;
+            height: 70px;
+            background-color: red;
+            margin-top: 20px;text-align: center;
+            line-height: 70px;
+        }
+        .footer h1 {
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 图标变化 -->
+    <div class="box"></div>
+    <!-- 商品栏 -->
+    <div class="bigone">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/61454401f855cf5ed64747a6ac04bae5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="华为手机">
+        <p>米家互联网对开门冰箱,重磅新品福利特惠</p>
+        <span class="now">￥6300</span>
+        <span class="past">￥9800</span>
+        <div class="apraise">
+            已售<span class="num">50</span>件
+            <div class="jindu">
+                <div class="full"></div>
+            </div>
+            剩余<span class="num">29</span>件
+        </div>
+        <div class="footer">
+            <h1><a href="https://www.bilibili.com/video/BV14J4114768?p=296&spm_id_from=pageDriver">立即抢购</a></h1>
+        </div>
+    </div>
+</body>
+
+</html>
